@@ -1,0 +1,57 @@
+.img-div {
+    display: flex;
+    justify-content: center;
+}
+
+.cartoon-img {
+    position: relative;
+    margin: 2rem;
+    width: 70rem;
+    height: auto;
+}
+
+.bewegende-afbeelding:nth-child(1) {
+    position: absolute;
+    width: 80rem;
+    height: auto;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 10s;
+}
+
+.bewegende-afbeelding:nth-child(2) {
+    position: absolute;
+    top: 10rem;
+    width: 15rem;
+    height: auto;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 10s;
+}
+
+.bewegende-afbeelding:nth-child(3) {
+    position: absolute;
+    top: 30rem;
+    width: 10rem;
+    height: auto;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 10s;
+}
+
+  @keyframes run {
+    0% {
+      left: 100%; /* Startpositie (rechts buiten het zicht) */
+      transform: rotate(0deg);
+    }
+    100% {
+      left: -500px; /* Eindpositie (net buiten de linkerzijde) */
+      transform: rotate(360deg);
+    }
+  }
